@@ -1,0 +1,479 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  /* font -family: sans-serif; */
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+}
+
+#back-to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #20938d;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+#back-to-top-btn:hover {
+  background-color: #20b4ad;
+}
+
+@media (max-width: 768px) {
+  #back-to-top-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  #back-to-top-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    bottom: 5px;
+    right: 5px;
+  }
+}
+
+.top-block {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url("./public/pictures/bgTopblock.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.row {
+  width: 100%;
+  padding: 0px 80px;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+  position: relative;
+  z-index: 1;
+}
+
+.navbar ul {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar ul li a {
+  padding: 10px 18px;
+  border-radius: 10px;
+  /* font-family: sans-serif; */
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar ul li a:hover {
+  background-color: #20b4ad;
+}
+
+.navbar h1 {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.content {
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content h1 {
+  font-size: 60px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.content p {
+  font-size: 32px;
+  margin: 10px;
+  color: #fff;
+}
+
+.content a {
+  text-decoration: none;
+  margin-top: 20px;
+  font-size: 19px;
+  display: inline-block;
+  letter-spacing: 2px;
+  padding: 12px 20px;
+  background-color: #20938d;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.content a:hover {
+  background-color: #20b4ad;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 90px;
+}
+
+.content-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.content-section .card {
+  width: calc(100% - 40px);
+  /* изменяем ширину карточек на всю ширину экрана */
+  max-width: 500px;
+  /* ограничиваем максимальную ширину карточек */
+  width: 500px;
+  height: 650px;
+  flex: 1;
+  margin: 20px 20px;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.content-section .card img {
+  width: 100%;
+  height: auto;
+}
+
+.content-section .card h2 {
+  margin: 15px 0px;
+  font-size: 28px;
+  color: #1b504d;
+  font-family: sans-serif;
+}
+
+.content-section .card p {
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 0px 10px;
+  margin-bottom: 20px;
+  font-family: sans-serif;
+}
+
+.order-button {
+  padding: 15px 40px;
+  margin-bottom: 20px;
+  background-color: #20938d;
+  /* серый цвет */
+  color: #fff;
+  /* белый цвет текста */
+  border: none;
+  border-radius: 30px;
+  /* половина высоты кнопки, чтобы сделать ее закругленной */
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.order-button:hover {
+  background-color: #20b4ad;
+  /* изменение цвета при наведении */
+}
+
+/* медиа-запросы для планшетов и мобильных устройств */
+@media (max-width: 768px) {
+  .content-section .card {
+      width: calc(50% - 40px); /* изменяем ширину карточек на половину ширины экрана */
+      
+  }
+}
+
+@media (max-width: 480px) {
+  .content-section .card {
+      width: calc(100% - 40px); /* изменяем ширину карточек на всю ширину экрана */
+  }
+}
+
+.contact-form {
+  width: 85%;
+  max-width: 600px;
+  background: #f7f7f7;
+  /* position: absolute; */
+  margin: 0 auto;
+  padding: 100px, 40px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.form {
+  border: 1px solid #a9a9a9;
+  margin: 25px 0px;
+  padding: 6px 20px;
+  border-radius: 15px;
+}
+
+.contact-form h1 {
+  font-weight: 500;
+  margin-top: 0px;
+}
+
+.form label {
+  font-size: 13px;
+  color: #000;
+  display: block;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  font-size: 19px;
+  margin-top: 5px;
+  border: none;
+  background: none;
+  outline: none;
+  resize: none;
+}
+
+.button {
+  width: 100%;
+  display: inline-block;
+  background-color: #20938d;
+  padding: 14px 0px;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 8px;
+  cursor: pointer;
+  color: #fff;
+  transition: background-color 0.3s;
+  border-radius: 30px;
+}
+
+.button:hover {
+  background-color: #20b4ad;
+  /* изменение цвета при наведении */
+}
+
+/*Контакты + Форма*/
+
+input,
+textarea {
+  box-sizing: border-box;
+}
+
+.container1 {
+  width: 100%;
+  padding: 200px;
+  box-sizing: border-box;
+  background-color: #f7f7f7;
+}
+
+.content1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+}
+
+.left-side {
+  width: 25%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-side::before {
+  content: "";
+  position: absolute;
+  height: 70%;
+  width: 2px;
+  background: #afafb6;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right-side {
+  width: 75%;
+  margin-left: 75px;
+}
+
+.details {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.details i {
+  font-size: 25px;
+  color: #20938d;
+  margin-bottom: 10px;
+}
+
+.topic {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+
+.text-one,
+.text-two {
+  font-size: 14px;
+  color: #afafb6;
+}
+
+.topic-text {
+  font-size: 23px;
+  font-weight: 600;
+  color: #20938d;
+  margin-bottom: 10px;
+}
+
+.right-side p {
+  margin-bottom: 20px;
+}
+
+.input-box {
+  height: 50px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.input-box input,
+.input-box textarea {
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+  background: #f0f1f8;
+  padding: 0 20px;
+}
+
+.input-box textarea {
+  resize: none;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.message-box {
+  min-height: 110px;
+}
+
+.button1 {
+  display: inline-block;
+}
+
+.button1 input[type="button"] {
+  color: #fff;
+  font-size: 18px;
+  background: #20938d;
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: 0.2s;
+}
+
+.button1 input[type="button"]:hover {
+  background: rgb(0, 207, 179);
+}
+
+.map {
+  background-color: #f7f7f7;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.map h1 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #20938d;
+}
+
+.iframe {
+  width: 80vw;
+  height: 60vh;
+  filter: invert(100%);
+}
+
+@media (max-width: 800px) {
+  .content1 {
+    height: 100%;
+    flex-direction: column-reverse;
+  }
+
+  .left-side {
+    margin-top: 50px;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .details {
+    margin-right: 20px;
+  }
+
+  .details:last-child {
+    margin-right: 0;
+  }
+
+  .left-side::before {
+    display: none;
+  }
+
+  .right-side {
+    width: 100%;
+    margin-left: 0;
+  }
+}
