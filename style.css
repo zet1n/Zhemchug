@@ -5,13 +5,13 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .body {
   display: flex;
   flex-direction: column;
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 #back-to-top-btn {
@@ -57,7 +57,7 @@
 .top-block {
   width: 100%;
   min-height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url("./public/pictures/bgTopblock.jpg");
+  background-image: linear-gradient(rgb(0 0 0 / 15%), rgba(0, 0, 0, 0.60)), url("./public/pictures/bgTopblock.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -72,8 +72,8 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 10px 0px;
+  align-items: start;
+  padding: 25px 0px;
   position: relative;
   z-index: 1;
 }
@@ -86,7 +86,6 @@
   display: flex;
   justify-self: center;
   align-items: center;
-  margin-top: 10px;
   gap: 20px;
 }
 
@@ -95,7 +94,7 @@
 }
 
 .navbar ul li a {
-  padding: 10px 0;
+  padding: 10px 10px;
 
   border-radius: 10px;
   /* font-family: sans-serif; */
@@ -115,6 +114,10 @@
   font-weight: 500;
   text-transform: uppercase;
   margin-top: 10px;
+}
+
+.navbar img {
+  width: 130%;
 }
 
 .content {
@@ -181,7 +184,7 @@
 
 .container h1 {
   margin: 30px 0;
-  /* font-size: 28px; */
+  font-size: calc( (100vw - 400px)/(1900 - 400) * (35 - 26) + 26px);
   color: #095c83;
 }
 
@@ -191,13 +194,12 @@
   max-width: 400px;
   /* ограничиваем максимальную ширину карточек */
   width: 400px;
-  height: 550px;
+  height: 580px;
   flex: 1;
   margin: 20px 20px;
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
 }
 
 .content-section .card img {
@@ -207,7 +209,7 @@
 
 .content-section .card h2 {
   margin: 15px 0px;
-  font-size: 28px;
+  font-size: 26px;
   color: #095c83;
   font-family: sans-serif;
 }
@@ -221,7 +223,7 @@
 }
 
 .order-button {
-  padding: 12px 36px;
+  padding: 12px 5%;
   background-color: #00acdb;
   /* серый цвет */
   color: #fff;
@@ -229,7 +231,7 @@
   border: none;
   border-radius: 30px;
   /* половина высоты кнопки, чтобы сделать ее закругленной */
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
@@ -264,18 +266,7 @@
 
 
 /* медиа-запросы для планшетов и мобильных устройств */
-@media (max-width: 768px) {
-  .content-section .card {
-      width: calc(50% - 40px); /* изменяем ширину карточек на половину ширины экрана */
-      
-  }
-}
 
-@media (max-width: 480px) {
-  .content-section .card {
-      width: calc(100% - 40px); /* изменяем ширину карточек на всю ширину экрана */
-  }
-}
 
 .contact-form {
   width: 85%;
@@ -443,7 +434,7 @@ textarea {
 .input-box textarea {
   resize: none;
   padding: 20px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .message-box {
@@ -522,5 +513,28 @@ textarea {
   .right-side {
     width: 100%;
     margin-left: 0;
+  }
+  .navbar img{
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-section .card {
+      width: calc(50% - 40px); /* изменяем ширину карточек на половину ширины экрана */
+      
+  }
+}
+
+@media (max-width: 480px) {
+  .content-section .card {
+      width: calc(100% - 40px); /* изменяем ширину карточек на всю ширину экрана */
+  }
+  .content-section .card{
+    height: auto;
+    justify-content: start;
+  }
+  .navbar img{
+    width: 90%;
   }
 }
